@@ -5,13 +5,13 @@
 # generated formula: the tap copy is rewritten from here on every release.
 #
 # Provenance of the release archive this formula installs:
-#   tag    v0.2.0
-#   commit 329c9070316d1bea2566c0fc8c18a12a1e44b22c
+#   tag    v0.3.0
+#   commit efc7292c66b8724539a5903542f52924f3018ff6
 class Skillmount < Formula
   desc "Portable skill mounting for coding agents (skillmount command)"
   homepage "https://github.com/pashifika/skillmount"
-  url "https://github.com/pashifika/skillmount/releases/download/v0.2.0/skillmount-v0.2.0-aarch64-apple-darwin.tar.gz"
-  sha256 "daf8e311fe76d13e81c463d352beaa29e2dadf10e165a00af835c5eacb736cc9"
+  url "https://github.com/pashifika/skillmount/releases/download/v0.3.0/skillmount-v0.3.0-aarch64-apple-darwin.tar.gz"
+  sha256 "d8a3b8b111253d5909e7b18a214aa20c6addb6e421ec4777bc35832995e041b7"
   license any_of: ["MIT", "Apache-2.0"]
 
   depends_on arch: :arm64
@@ -24,7 +24,7 @@ class Skillmount < Formula
   end
 
   test do
-    assert_match "0.2.0", shell_output("#{bin}/skillmount --version")
+    assert_match "0.3.0", shell_output("#{bin}/skillmount --version")
     assert_match "Usage:", shell_output("#{bin}/skillmount --help")
 
     # SkillMount resolves its product identity from argv[0] and rejects a renamed alias, so
